@@ -5,15 +5,11 @@
 
 int main() {
     std::println(
+    "hello" " hello!"
 #include "string1.h"
 #include "string1.h"
 #include "string1.h"
-#include "string2"
-#include "string2"
-#include "string2"
-#include "string3"
-#include "string3"
-#include "string3"
-#include "string3"
+#include "string1.h"
+    " hello again"
 );
 }

@@ -3,6 +3,7 @@
 #include <string>
 
 int main(int argc, char *argv[]) {
+    std::println("Got {} arguments", argc);
     if (argc != 2 && argc != 3) {
         std::println("USAGE: {} <some_string> [search_string]", argv[0]);
         return 1;
