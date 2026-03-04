@@ -16,16 +16,14 @@ int main() {
     i = 0;
     while (i < nums.size()) {
         if (nums[i] % 2 == 0) break;
-        std::println("{:02}", nums[i]);
+        std::println("{}", nums[i]);
         i++;
     }
 
     std::println("Phase 2");
     // with continue
-    i = 0;
-    while (i < nums.size()) {
+    for (i = 0; i < nums.size(); i++) {
         if (nums[i] % 2 == 0) continue;
-        std::println("{:02}", nums[i]);
-        i++;
+        std::println("{:04}", nums[i]);
     }
 }

@@ -3,17 +3,20 @@
 #include <string>
 
 const std::array types = { "bigrange", "midrange", "smallrange" };
-const std::array mins = { 0, 10, 20 };
+const std::array mins = { 0, 20 };
 const std::array maxs = { 100, 50, 30 };
 
 int main() {
     for (int i = 0; i < 3; i++) {
         while (true) {
-            std::println("Give me a {} number between {} and {}", types[i], mins[i], maxs[i]);
+            std::println("Give me a {} number between {} and {}",
+                          types[i], mins[i], maxs[i]);
             int num;
-            if (std::cin >> num) {
+            std::cin >> num;
+            if (std::cin) {
                 if (num >= mins[i] && num <= maxs[i]) break;
-                std::println("{} is not between {} and {}. Try again!", num, mins[i], maxs[i]);
+                std::println("{} is not between {} and {}. Try again!",
+                              num, mins[i], maxs[i]);
                 continue;
             }
             if (std::cin.eof()) return 2;

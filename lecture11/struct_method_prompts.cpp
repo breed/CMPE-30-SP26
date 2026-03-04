@@ -5,10 +5,10 @@
 
 struct range_t {
 private:
-    std::string type;
     int min;
     int max;
 public:
+    std::string type;
     range_t(std::string type, int min, int max) : type(type), min(min), max(max) {}
     std::string get_prompt() const {
         return std::format("Give me a {} number between {} and {}", type, min, max);
@@ -28,6 +28,7 @@ const std::array ranges {
 int main() {
     for (const auto &r : ranges) {
         while (true) {
+            std::println("Processing {}", r.type);
             std::println("{}", r.get_prompt());
             int num;
             if (std::cin >> num) {

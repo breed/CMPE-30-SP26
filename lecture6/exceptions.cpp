@@ -15,7 +15,7 @@ int divide_exception(int a, int b) {
     return a / b;
 }
 void between_1_and_10(int i) {
-    if (i < 1 && i > 10) {
+    if (i < 1 || i > 10) {
         throw std::range_error(std::format("{} not between 1&10", i));
     }
 }
