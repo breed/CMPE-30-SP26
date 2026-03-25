@@ -4,8 +4,9 @@
 
 int main() {
     std::random_device rd{};
+    std::println("{} {} {}", rd(), rd(), rd());
     std::default_random_engine gen{rd()};
-    std::uniform_distribution nums{1, 100};
+    std::uniform_int_distribution nums{1, 100};
     while (std::cin) {
         int a = nums(gen);
         int b = nums(gen);
