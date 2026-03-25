@@ -8,8 +8,12 @@ int main(int argc, char **argv) {
     }
 
     auto of = std::ofstream(argv[1]);
-    for (int i = 0; i < 10; ++i) {
-        of << argv[2] << "\n";
+    if (of) {
+        for (int i = 0; i < 10; ++i) {
+            of << argv[2] << "\n";
+        }
+        of.close();
+    } else {
+        std::cout << "could not open " << argv[1] << "\n";
     }
-    of.close();
 }
