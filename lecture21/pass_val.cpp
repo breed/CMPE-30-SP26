@@ -18,5 +18,9 @@ int main() {
     Noisy t;
     std::cout << &t << " is t\n";
     auto u = foo_val(t);
+    {
+        std::cout << "setting v\n";
+        auto v = u;
+    }
     std::cout << &u << " is t\n";
 }
